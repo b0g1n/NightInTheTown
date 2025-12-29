@@ -8315,7 +8315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5331109d36732446bae7212023916de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportOnInteract
-  sceneName: Apt
+  sceneName: EndScene
   interactText: {fileID: 711352405}
 --- !u!1 &1810644165
 GameObject:
