@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class OppStoppa : MonoBehaviour
 {
@@ -8,6 +10,10 @@ public class OppStoppa : MonoBehaviour
 
     [Header("Scene")]
     public string sceneToLoad;
+
+    [Header("Catch Effect")]
+    public RawImage catchImage;
+    public float imageDuration = 1f;
 
     private Transform player;
     private bool triggered;
@@ -23,13 +29,11 @@ public class OppStoppa : MonoBehaviour
     {
         if (player == null || triggered) return;
 
-        // Look at player (Y axis only)
         Vector3 lookDir = player.position - transform.position;
         lookDir.y = 0f;
         if (lookDir != Vector3.zero)
             transform.rotation = Quaternion.LookRotation(lookDir);
 
-        // Move toward player
         transform.position = Vector3.MoveTowards(
             transform.position,
             player.position,
@@ -43,8 +47,18 @@ public class OppStoppa : MonoBehaviour
         if (!other.CompareTag("Player")) return;
 
         triggered = true;
+        StartCoroutine(CatchSequence());
+    }
 
-        // Load scene
+    IEnumerator CatchSequence()
+    {
+        if (catchImage != null)
+             catchImage.gameObject.SetActive(true);
+        yield return null;
+
+        yield return new WaitForSecondsRealtime(imageDuration);
+
         SceneManager.LoadScene(sceneToLoad);
     }
+
 }

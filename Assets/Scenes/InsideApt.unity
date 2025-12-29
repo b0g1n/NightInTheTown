@@ -4555,7 +4555,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Objective : Enter your brother''s apartment '
+  m_text: 'Objective : Enter your brother''s apartment (the last door)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
   m_sharedMaterial: {fileID: -688601782570998162, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
@@ -4621,7 +4621,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 21.917913, z: -124.99722, w: -28.567368}
+  m_margin: {x: 0, y: 21.917913, z: -138.12424, w: -28.567368}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
