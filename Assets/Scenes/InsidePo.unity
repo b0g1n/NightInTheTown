@@ -4979,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OppStoppa
   moveSpeed: 5
-  sceneToLoad: Apt
+  sceneToLoad: Basement2
   catchImage: {fileID: 566997689}
   imageDuration: 1
 --- !u!54 &2957880757128069291

@@ -334,13 +334,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 232557253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eaaf7d9c6dc74447b6a9d4597156ec9, type: 3}
+  m_Script: {fileID: 11500000, guid: f5331109d36732446bae7212023916de, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JumpScare
-  sceneName: KillerGarden
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportOnInteract
+  sceneName: FinalFight
   interactText: {fileID: 711352405}
-  jumpScareObject: {fileID: 392286066354990484}
-  jumpScareDuration: 1
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,7 +1528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Objective : Escape'
+  m_text: 'Objective : Escape and find the killer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
   m_sharedMaterial: {fileID: -688601782570998162, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
@@ -1596,7 +1594,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 21.132214, z: -124.99722, w: -2.614357}
+  m_margin: {x: 0, y: 21.132214, z: -197.88702, w: -2.614357}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2492,8 +2490,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: What the hell? My head hurts so bad, i hardly remember anything except
-    a strange man in my dream... Where am i?!
+  m_text: Back here again... i have to end this myself.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
   m_sharedMaterial: {fileID: -688601782570998162, guid: b7a1669f4fbe19243aa5fc34ad34c6a9, type: 2}
@@ -2520,7 +2517,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23
+  m_fontSize: 39
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2606,7 +2603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Message
   interactText: {fileID: 711352407}
   messageText: {fileID: 1251853546}
-  customMessage: '"PLAY MY GAME, PLAY MY GAME, PLAY MY GAME"'
+  customMessage: I'll play your game then.
   messageDuration: 5
   cooldownTime: 3
   ZonaLeave: {fileID: 232557253}
@@ -2921,7 +2918,7 @@ GameObject:
   - component: {fileID: 1528105530}
   - component: {fileID: 1528105529}
   - component: {fileID: 1528105528}
-  - component: {fileID: 1528105526}
+  - component: {fileID: 1528105531}
   m_Layer: 0
   m_Name: Zona ziar
   m_TagString: Untagged
@@ -2929,24 +2926,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1528105526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528105525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c730e764394594446a7ffc9edb4332ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Message
-  interactText: {fileID: 711352407}
-  messageText: {fileID: 1251853546}
-  customMessage: The body is still warm...
-  messageDuration: 5
-  cooldownTime: 3
-  ZonaLeave: {fileID: 1343866351}
 --- !u!65 &1528105528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2991,6 +2970,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1528105531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528105525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3e2b30620533548aaa7ab4e97f1b62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Police
+  interactText: {fileID: 711352407}
+  messageText: {fileID: 1251853546}
+  customMessage: This will come in handy...
+  messageDuration: 5
+  cooldownTime: 3
+  zonaLeave: {fileID: 1343866351}
+  objectToDisable: {fileID: 5544464519661230826}
+  objectToEnable: {fileID: 0}
 --- !u!1 &1543897371
 GameObject:
   m_ObjectHideFlags: 0
