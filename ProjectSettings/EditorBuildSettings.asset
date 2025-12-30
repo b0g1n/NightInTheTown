@@ -23,6 +23,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Basement.unity
     guid: 2d1b597e949407d448ba1eb25401639f
+  - enabled: 1
+    path: Assets/Scenes/KillerGarden.unity
+    guid: a3354b71122fa414d9596fe72787c4a5
+  - enabled: 1
+    path: Assets/Scenes/PoliceStation.unity
+    guid: 5cfc36c6de453864587ac16838ae896b
+  - enabled: 1
+    path: Assets/Scenes/InsidePo.unity
+    guid: cb6c20ed9730d2340b23ba12ce932f1f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 189e28debaf51724990ed0f3f7c76804, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -29,11 +29,23 @@ public class OppStoppa : MonoBehaviour
     {
         if (player == null || triggered) return;
 
+        // Face player on Y axis only (preserve X and Z rotation)
         Vector3 lookDir = player.position - transform.position;
         lookDir.y = 0f;
-        if (lookDir != Vector3.zero)
-            transform.rotation = Quaternion.LookRotation(lookDir);
 
+        if (lookDir != Vector3.zero)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(lookDir);
+            Vector3 currentEuler = transform.eulerAngles;
+
+            transform.rotation = Quaternion.Euler(
+                currentEuler.x,
+                targetRot.eulerAngles.y,
+                currentEuler.z
+            );
+        }
+
+        // Move toward player
         transform.position = Vector3.MoveTowards(
             transform.position,
             player.position,
@@ -53,12 +65,9 @@ public class OppStoppa : MonoBehaviour
     IEnumerator CatchSequence()
     {
         if (catchImage != null)
-             catchImage.gameObject.SetActive(true);
-        yield return null;
+            catchImage.gameObject.SetActive(true);
 
         yield return new WaitForSecondsRealtime(imageDuration);
-
         SceneManager.LoadScene(sceneToLoad);
     }
-
 }

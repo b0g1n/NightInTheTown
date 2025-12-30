@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaaf7d9c6dc74447b6a9d4597156ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JumpScare
-  sceneName: Apt
+  sceneName: PoliceStation
   interactText: {fileID: 711352405}
   jumpScareObject: {fileID: 560992366}
   jumpScareDuration: 6
